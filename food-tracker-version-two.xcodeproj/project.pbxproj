@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		01106D302CE6778600DCC5E5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 01106D2F2CE6777700DCC5E5 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		01106D012CE669DE00DCC5E5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		01106CF02CE669DC00DCC5E5 /* food-tracker-version-two.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "food-tracker-version-two.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01106D002CE669DE00DCC5E5 /* food-tracker-version-twoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "food-tracker-version-twoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01106D0A2CE669DE00DCC5E5 /* food-tracker-version-twoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "food-tracker-version-twoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01106D2F2CE6777700DCC5E5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		01106CE72CE669DC00DCC5E5 = {
 			isa = PBXGroup;
 			children = (
+				01106D2F2CE6777700DCC5E5 /* .gitignore */,
 				01106CF22CE669DC00DCC5E5 /* food-tracker-version-two */,
 				01106D032CE669DE00DCC5E5 /* food-tracker-version-twoTests */,
 				01106D0D2CE669DE00DCC5E5 /* food-tracker-version-twoUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01106D302CE6778600DCC5E5 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
