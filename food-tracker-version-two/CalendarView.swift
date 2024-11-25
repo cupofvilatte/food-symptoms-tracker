@@ -26,7 +26,7 @@ struct CalendarView: View {
             }
             
             let daysInMonth = getDaysInMonth()
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 10) {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(minimum: 40, maximum:50)), count: 7), spacing: 10) {
                 ForEach(daysInMonth, id: \.self) { day in
                     Text(day == 0 ? "" : "\(day)")
                         .font(.body)
@@ -38,6 +38,19 @@ struct CalendarView: View {
                 }
             }
             .padding()
+            
+            Spacer()
+            
+            NavigationLink(destination: TrackingView()) {
+                Image(systemName: "plus")
+                    .resizable()
+                    .frame(width: 24, height: 24)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundStyle(.white)
+                    .clipShape(Circle())
+            }
+            .padding(.bottom, 20)
         }
         .padding()
     }
