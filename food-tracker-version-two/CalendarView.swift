@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CalendarView: View {
     @State private var currentDate = Date()
+    @State private var showTrackingView = false
     private var calendar = Calendar.current
     private let daysOfWeek: [String] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
     
@@ -41,7 +42,9 @@ struct CalendarView: View {
             
             Spacer()
             
-            NavigationLink(destination: TrackingView()) {
+            Button(action: {
+                showTrackingView = true
+            }) {
                 Image(systemName: "plus")
                     .resizable()
                     .frame(width: 24, height: 24)
@@ -50,7 +53,11 @@ struct CalendarView: View {
                     .foregroundStyle(.white)
                     .clipShape(Circle())
             }
+            
             .padding(.bottom, 20)
+            .sheet(isPresented: $showTrackingView) {
+                TrackingView()
+            }
         }
         .padding()
     }
