@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		01106D302CE6778600DCC5E5 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 01106D2F2CE6777700DCC5E5 /* .gitignore */; };
+		CFA380FC2D021CD7007FE625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA380EE2D021CD7007FE625 /* AppDelegate.swift */; };
+		CFA380FD2D021CD7007FE625 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA380F32D021CD7007FE625 /* UIImageView+Extensions.swift */; };
+		CFA380FE2D021CD7007FE625 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA380F72D021CD7007FE625 /* AuthManager.swift */; };
+		CFA380FF2D021CD7007FE625 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA380FA2D021CD7007FE625 /* User.swift */; };
+		CFA381002D021CD7007FE625 /* LoginViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA380F92D021CD7007FE625 /* LoginViewWrapper.swift */; };
+		CFA381012D021CD7007FE625 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA380F82D021CD7007FE625 /* LoginView.swift */; };
+		CFA381032D021CD7007FE625 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA380F02D021CD7007FE625 /* LaunchScreen.storyboard */; };
+		CFA381042D021CD7007FE625 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFA380F62D021CD7007FE625 /* Auth0.plist */; };
+		CFA381052D021CD7007FE625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA380F22D021CD7007FE625 /* Main.storyboard */; };
+		CFA381072D021E78007FE625 /* Info copy.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFA381062D021E78007FE625 /* Info copy.plist */; };
+		CFA3810A2D021FE5007FE625 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = CFA381092D021FE5007FE625 /* Auth0 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +43,16 @@
 		01106D002CE669DE00DCC5E5 /* food-tracker-version-twoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "food-tracker-version-twoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01106D0A2CE669DE00DCC5E5 /* food-tracker-version-twoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "food-tracker-version-twoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01106D2F2CE6777700DCC5E5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		CFA380EE2D021CD7007FE625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFA380EF2D021CD7007FE625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFA380F12D021CD7007FE625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFA380F32D021CD7007FE625 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		CFA380F62D021CD7007FE625 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		CFA380F72D021CD7007FE625 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		CFA380F82D021CD7007FE625 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CFA380F92D021CD7007FE625 /* LoginViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewWrapper.swift; sourceTree = "<group>"; };
+		CFA380FA2D021CD7007FE625 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CFA381062D021E78007FE625 /* Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info copy.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -57,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA3810A2D021FE5007FE625 /* Auth0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				01106D2F2CE6777700DCC5E5 /* .gitignore */,
+				CFA381062D021E78007FE625 /* Info copy.plist */,
+				CFA380FB2D021CD7007FE625 /* iOS UIKit Login 2 copy */,
 				01106CF22CE669DC00DCC5E5 /* food-tracker-version-two */,
 				01106D032CE669DE00DCC5E5 /* food-tracker-version-twoTests */,
 				01106D0D2CE669DE00DCC5E5 /* food-tracker-version-twoUITests */,
@@ -96,6 +120,30 @@
 				01106D0A2CE669DE00DCC5E5 /* food-tracker-version-twoUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CFA380F42D021CD7007FE625 /* Other project files */ = {
+			isa = PBXGroup;
+			children = (
+				CFA380EE2D021CD7007FE625 /* AppDelegate.swift */,
+				CFA380F02D021CD7007FE625 /* LaunchScreen.storyboard */,
+				CFA380F22D021CD7007FE625 /* Main.storyboard */,
+				CFA380F32D021CD7007FE625 /* UIImageView+Extensions.swift */,
+			);
+			path = "Other project files";
+			sourceTree = "<group>";
+		};
+		CFA380FB2D021CD7007FE625 /* iOS UIKit Login 2 copy */ = {
+			isa = PBXGroup;
+			children = (
+				CFA380F42D021CD7007FE625 /* Other project files */,
+				CFA380F62D021CD7007FE625 /* Auth0.plist */,
+				CFA380F72D021CD7007FE625 /* AuthManager.swift */,
+				CFA380F82D021CD7007FE625 /* LoginView.swift */,
+				CFA380F92D021CD7007FE625 /* LoginViewWrapper.swift */,
+				CFA380FA2D021CD7007FE625 /* User.swift */,
+			);
+			path = "iOS UIKit Login 2 copy";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +166,7 @@
 			);
 			name = "food-tracker-version-two";
 			packageProductDependencies = (
+				CFA381092D021FE5007FE625 /* Auth0 */,
 			);
 			productName = "food-tracker-version-two";
 			productReference = 01106CF02CE669DC00DCC5E5 /* food-tracker-version-two.app */;
@@ -201,6 +250,9 @@
 			);
 			mainGroup = 01106CE72CE669DC00DCC5E5;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CFA381082D021FE5007FE625 /* XCRemoteSwiftPackageReference "Auth0" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 01106CF12CE669DC00DCC5E5 /* Products */;
 			projectDirPath = "";
@@ -218,7 +270,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA381072D021E78007FE625 /* Info copy.plist in Resources */,
 				01106D302CE6778600DCC5E5 /* .gitignore in Resources */,
+				CFA381032D021CD7007FE625 /* LaunchScreen.storyboard in Resources */,
+				CFA381042D021CD7007FE625 /* Auth0.plist in Resources */,
+				CFA381052D021CD7007FE625 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +299,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFA380FC2D021CD7007FE625 /* AppDelegate.swift in Sources */,
+				CFA380FD2D021CD7007FE625 /* UIImageView+Extensions.swift in Sources */,
+				CFA380FE2D021CD7007FE625 /* AuthManager.swift in Sources */,
+				CFA380FF2D021CD7007FE625 /* User.swift in Sources */,
+				CFA381002D021CD7007FE625 /* LoginViewWrapper.swift in Sources */,
+				CFA381012D021CD7007FE625 /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +336,25 @@
 			targetProxy = 01106D0B2CE669DE00DCC5E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CFA380F02D021CD7007FE625 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFA380EF2D021CD7007FE625 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CFA380F22D021CD7007FE625 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFA380F12D021CD7007FE625 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		01106D122CE669DE00DCC5E5 /* Debug */ = {
@@ -559,6 +640,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CFA381082D021FE5007FE625 /* XCRemoteSwiftPackageReference "Auth0" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CFA381092D021FE5007FE625 /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CFA381082D021FE5007FE625 /* XCRemoteSwiftPackageReference "Auth0" */;
+			productName = Auth0;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 01106CE82CE669DC00DCC5E5 /* Project object */;
 }

@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct food_tracker_version_twoApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    @StateObject private var authManager = AuthManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if authManager.isAuthenticated {
+                ContentView()
+            } else {
+                LoginViewWrapper()
+                    .environmentObject(authManager)
+            }
         }
     }
 }
