@@ -1,3 +1,7 @@
+/*
+ Global styles
+*/
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,6 +9,10 @@ body {
     color: #333;
 }
 
+/*
+  Container class used to center content on the page and apply padding around the content area.
+  The max-width ensures the content doesn't stretch too wide on large screens.
+*/
 .container {
     text-align: left;
     max-width: 1200px;
@@ -12,6 +20,9 @@ body {
     padding: 20px;
 }
 
+/*
+  Styling for the logo section. This ensures the logo is centered and has space below it.
+*/
 .logo {
     text-align: center;
     margin-bottom: 20px;
@@ -23,6 +34,10 @@ body {
     border-radius: 50px;
 }
 
+/*
+  Styling for the header section, including the title and description.
+  The header has padding to give it space above and below.
+*/
 header {
     text-align: left;
     padding: 20px 0;
@@ -40,16 +55,25 @@ header p {
     margin: 5px 0 20px
 }
 
+/*
+  Scroll section styling, which holds horizontally scrolling elements. Adds space above this section.
+*/
 .scroll-section {
     margin-top: 30px;
 }
 
+/*
+  Styling for the second-level heading in the scroll section, giving it a green color and a bottom margin for spacing.
+*/
 .scroll-section h2 {
     font-size: 1.8em;
     color: #4CAF50;
     margin-bottom: 20px;
 }
 
+/*
+  Scroll container styling, which is used to create a horizontally scrollable area with spaced-out cards.
+*/
 .scroll-container {
     display: flex;
     overflow-x: auto;
@@ -78,20 +102,32 @@ header p {
     color: #666;
 }
 
-/* Add smooth scrolling behavior */
+/* Add smooth scrolling behavior
+  Styling for the custom scrollbar in the scroll container.
+  This adds a smooth appearance and a green thumb for the scrollbar.
+*/
 .scroll-container::-webkit-scrollbar {
     height: 8px;
 }
 
+/*
+  Scrollbar thumb (the draggable part) styling. This sets the color to green and applies rounded corners.
+*/
 .scroll-container::-webkit-scrollbar-thumb {
     background-color: #4CAF50;
     border-radius: 10px;
 }
 
+/*
+  Scrollbar track styling. This defines the background of the area the scrollbar moves within.
+*/
 .scroll-container::-webkit-scrollbar-track {
     background-color: #e0e0e0;
 }
 
+/*
+  Media query for screens smaller than 600px wide. It ensures that nav, article, and main elements have 100% height for better layout responsiveness on mobile.
+*/
 @media (max-width: 600px) {
     nav, article, main {
       height: 100%;
