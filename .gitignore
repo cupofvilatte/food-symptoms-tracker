@@ -12,7 +12,9 @@ DerivedData/
 *.mode1v3
 *.mode2v3
 *.perspectivev3
-
+*.plist
 # Swift Package Manager
 .build/
 .swiftpm/xcode/
+ls
+
