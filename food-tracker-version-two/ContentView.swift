@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    // passes login credentials as an environment object
+    @EnvironmentObject var authManager: AuthManager
+    
     var body: some View {
             // tabs on the bottom to click to different pages
             TabView {
@@ -19,6 +22,8 @@ struct ContentView: View {
                     }
                 
                 CalendarView()
+                // only passes login info to calendar because it's the only view where they are relevant
+                    .environmentObject(authManager)
                     .tabItem {
                         // calendar icon
                         Image(systemName: "calendar")
@@ -39,9 +44,11 @@ struct ContentView: View {
                         Text("Contact Us")
                     }
             }
+            .environmentObject(AuthManager())
         }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(AuthManager())
 }

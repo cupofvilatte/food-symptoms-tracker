@@ -91,7 +91,6 @@ class LoginView: UIViewController {
     
       userNameLabel.text = user.name
       userEmailLabel.text = user.email
-      userPicture.load(url: URL(string: user.picture)!)
   }
   
   
@@ -107,52 +106,7 @@ class LoginView: UIViewController {
             }
         }
     }
-//  func login() {
-//      
-//    Auth0
-//          .webAuth()
-//          .start { result in
-//              
-//              switch result {
-//                  
-//              case .failure(let error):
-//                  //The user either pressed the "Cancel" button
-//                  // on the Universal Login screen or something
-//                  // unusual happened.
-//                  if error == .userCancelled {
-//                      let alert = UIAlertController(
-//                        title: "Please log in.",
-//                        message: "You need to log in to use the app.",
-//                        preferredStyle: .alert)
-//                      alert.addAction(
-//                        UIAlertAction(
-//                            title: NSLocalizedString(
-//                                "OK",
-//                                comment: "Default action"
-//                            ),
-//                            style: .default,
-//                            handler: { _ in
-//                                NSLog("Displayed the \"Please log in\" alert.")
-//                        }))
-//                      self.present(alert, animated: true, completion: nil)
-//                      
-//                  } else {
-//                      print("An unexpected error occurred: \(error.localizedDescription)")
-//                  }
-//              case .success(let credentials):
-//                  // The user successfully logged in.
-//                  self.userIsAuthenticated = true
-//                  self.user = User.from(credentials.idToken)
-//                  
-//                  DispatchQueue.main.async {
-//                      self.updateTitle()
-//                      self.updateButtonsAndStack()
-////                      self.updateUserInfoUI()
-//                  }
-//              } //switch
-//              
-//          } //start()
-//  }
+
     func logout() {
        authManager.logout()
        userIsAuthenticated = false
@@ -163,26 +117,6 @@ class LoginView: UIViewController {
            self.updateButtonsAndStack()
        }
    }
-//  func logout() {
-//    Auth0
-//      .webAuth()
-//      .clearSession { result in
-//          switch result {
-//              
-//          case .failure(let error):
-//              print("Failed with: \(error)")
-//              
-//          case .success():
-//              self.userIsAuthenticated = false
-//              self.user = User.empty
-//              
-//              DispatchQueue.main.async {
-//                  self.updateTitle()
-//                  self.updateButtonsAndStack()
-//              }
-//          }
-//      }
-//  }
   
 }
 

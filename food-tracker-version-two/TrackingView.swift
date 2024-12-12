@@ -8,9 +8,14 @@
 
 // change to popup form, not separate page, for tracking
 import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
 
 // user interface for tracking symptoms and food intake
 struct TrackingView: View {
+    // environment objects for authmanager and presentation mode
+    @EnvironmentObject var authManager: AuthManager
+    @Environment(\.presentationMode) var presentationMode
     // variables for date, symptom, and food
     @State private var selectedDate = Date()
     @State private var symptomDescription = ""
@@ -52,14 +57,59 @@ struct TrackingView: View {
         }
     }
     
-    // to be updated. to track data when button is pressed
+    // track data when button is pressed
     private func saveTrackingData() {
-        print("Date: \(selectedDate), Description: \(symptomDescription)")
+        guard let auth0User = authManager.auth0User else {
+            print("User data is missing. Make sure to authenticate before saving.")
+            return
+        }
+        
+        print("Saving data for user ID: \(auth0User.id)")
+        // prevents saving without adding a symptom
+        guard !symptomDescription.isEmpty else {
+            print("Symptom description cannot be empty.")
+            return
+        }
+        // initiate database
+        let db = Firestore.firestore()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let dateString = dateFormatter.string(from: selectedDate)
+        
+        // specifies data to be saved
+        let symptomData: [String: Any] = [
+            "date": dateString,
+            "description": symptomDescription,
+            "food": foodEnter,
+            "timestamp": FieldValue.serverTimestamp()
+        ]
+        // creates data structure
+        db.collection("users")
+            .document(auth0User.id)
+            .collection("symptoms")
+            .addDocument(data: symptomData) { error in
+                if let error = error {
+                    print("Error saving symptom data: \(error.localizedDescription)")
+                } else {
+                    print("Symptom data saved successfully.")
+                    symptomDescription = ""
+                    presentationMode.wrappedValue.dismiss()
+                }
+            }
     }
 }
 
 struct TrackingView_Previews: PreviewProvider {
     static var previews: some View {
-        TrackingView()
+        let mockAuthManager = AuthManager()
+        mockAuthManager.auth0User = Auth0User(
+            id: "sampleUserID",
+            name: "Sample User",
+            email: "sample@example.com"
+//         , emailVerified: "true", picture: "", updatedAt: ""
+        )
+        return TrackingView()
+            .environmentObject(mockAuthManager)
     }
 }

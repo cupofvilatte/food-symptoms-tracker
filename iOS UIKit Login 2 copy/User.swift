@@ -17,9 +17,9 @@ struct User {
     let id: String
     let name: String
     let email: String
-    let emailVerified: String
-    let picture: String
-    let updatedAt: String
+//    let emailVerified: String
+//    let picture: String
+//    let updatedAt: String
     
 }
 
@@ -30,10 +30,11 @@ extension User {
         return User(
             id: "",
             name: "",
-            email: "",
-            emailVerified: "",
-            picture: "",
-            updatedAt: "")
+            email: ""
+//            emailVerified: "",
+//            picture: "",
+//            updatedAt: ""
+        )
     }
     
     static func from(_ idToken: String) -> Self {
@@ -52,10 +53,10 @@ extension User {
         return User(
             id: id,
             name: name,
-            email: email,
-            emailVerified: String(describing: emailVerified),
-            picture: picture,
-            updatedAt: updatedAt
+            email: email
+//            emailVerified: String(describing: emailVerified),
+//            picture: picture,
+//            updatedAt: updatedAt
         )
     }
 }
