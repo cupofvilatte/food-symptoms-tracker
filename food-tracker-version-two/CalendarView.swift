@@ -9,6 +9,8 @@ import SwiftUI
 
 // structure for calendar page
 struct CalendarView: View {
+    // Passes credentials as an environment object
+    @EnvironmentObject var authManager: AuthManager
     // current date saved as the actual date
     @State private var currentDate = Date()
     // by default do not show current date
@@ -70,6 +72,8 @@ struct CalendarView: View {
             // when the button is clicked, the TrackingView will appear
             .sheet(isPresented: $showTrackingView) {
                 TrackingView()
+                    // Passes the credentials to tracking view
+                    .environmentObject(authManager)
             }
         }
         .padding()
