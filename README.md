@@ -1,3 +1,4 @@
+
 # Food Sensitivity and Symptom Tracker
 
 # Overview
@@ -5,6 +6,8 @@ This iOS application helps users track symptoms in relation to their food intake
 
 ## Our Purpose  
 The **Food Symptom Tracker** was created to assist individuals in better understanding how their diet impacts their health. Our goal is to provide a tool that simplifies tracking food intake and related symptoms, enabling users to identify patterns and potential sensitivities more easily. We were motivated to build this app because of the growing demand for personalized health solutions and the lack of intuitive tools for managing food-related sensitivities.
+
+---
 
 Some of our primary goals are:
  - Empower users to make informed decisions about their diets
@@ -17,7 +20,9 @@ Some of our primary goals are:
 - **Correlation Analysis**: The app will help users identify if there’s a potential link between the time they consumed a certain food and when they experienced a symptom.
 - **FatSecret Platform API Integration**: Users will be able to search and log foods from the FatSecret API database.
 - **User Authentication**: A log-in page will allow users to create an account and save their data securely.
-- **Homepage**: A user-friendly homepage will provide an overview of their recent food entries and symptoms.
+- **Dashboard**: A user-friendly homepage displaying recent entries and trends. 
+
+---
 
 # Usage
     1. **Sign Up/Login**: Create an account or log in.
@@ -46,6 +51,9 @@ Some of our primary goals are:
 - **Platform**: iOS
 - **API**: FatSecret Platform API for food data
 - **Database**: Firebase
+- **Development Environment**: Xcode  
+- **Design Tools**: Figma (for UI mockups), Handdrawn wireframes
+- **Collaboration**: Microsoft Teams, Jira, GitHub
 
 This project was built using mainly Swift for the functionality. Some displays were implemented using HTML and CSS.
 
