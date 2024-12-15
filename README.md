@@ -32,7 +32,7 @@
 
 
 
-[Software Demo Video] ((https://youtu.be/OEz7xT2lSaM))
+[Software Demo Video](https://youtu.be/OEz7xT2lSaM)
 
 # Development Environment
 - **Language**: Swift, HTML, and CSS
