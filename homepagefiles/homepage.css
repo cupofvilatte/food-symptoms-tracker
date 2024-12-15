@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Sacramento&family=Sofia&display=swap');
+
+.container {
+    display: grid;
+    grid-template-rows: auto, auto;
+    /* grid-template-areas: 
+        "header"
+        "main"
+        "footer"; */
+    height: 100%;
+}
+
+
+/* header {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+} */
+
+
+footer {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* grid-row-start: 3 */
+    background-color: #0E2B6A;
+    color: white;
+    text-align: center;
+    padding: 230px;
+    margin: 0px;
+}
+
+body {
+  /* background-color: #96CCFA; */
+  background-color: #96CCFA;
+  font-family: "Delius Swash Caps";
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 26%;
+  /* margin-top: 200px;
+  margin-bottom: 200px; */
+}
+
+/* header {
+  background-color: #135e29;
+  display: grid;
+  grid-template-columns: 200px auto;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+} */
+
+.welcome {
+    font-family: "Delius Swash Caps";
+    text-align: center;
+    padding: 20px;
+}
+
+.subtext {
+    font-family: "EB Garamond";
+    text-align: center;
+    padding: 15px;
+}
+
+/* .button {
+    font-family: "Delius Swash Caps";
+    font-size: large;
+    text-align: center;
+    padding: 15px;
+    background-color: beige;
+    color: black;
+    border-color: #EDFAAE;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+} */
+
+
+
+
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
